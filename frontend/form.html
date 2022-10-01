@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .form-input{
+                padding:20px;
+                margin:10px;
+            }
+        </style>
+        <title> Form demo</title>
+    </head>
+    <body>
+        <div style="border:2px solid">
+            <form name="registrationForm" action="signup.html" method="get">
+                <div class="form-input">
+                    <label>First Name &nbsp; &nbsp;:</label>
+                    <input type="text" name="firstname" value="" placeholder="enter first name" required/>
+                </div>
+               
+                <div class="form-input">
+                    <label>Last Name</label>
+                    <input type="text" name="lname" value="test" placeholder="enter last name"/>
+                </div>
+               
+                <div class="form-input">
+                    <label>
+                        Email:
+                    </label>
+                    <input type="email" name="email" value="" placeholder="enter email"/>
+                </div>
+                
+                <div class="form-input">
+                    <label>Password : </label>
+                    <input type="password" name="password" value="" placeholder="enter password"/>
+                </div>
+               
+                <div class="form-input">
+                    <label>DOB: </label>
+                    <input type="date" name="dob" placeholder="enter dob" value=""/>
+                </div>
+             
+                <div class="form-input">
+                    <label> Profile pic: </label>
+                    <input type="file" name="profilepic" placeholder="enter file"/>
+        
+                </div>
+               
+                <div class="form-input">
+                    <label>Gender : </label>
+                    <label>Male:</label>
+                    <input type="radio" name="gender" />
+                </div>
+                <div class="form-input">
+                    <label>Female: </label>
+                    <input type="radio" name="gender" />
+                </div>
+              
+    
+                <div class="form-input">
+                    <label>Course: </label>
+                    <label>BCA</label>
+                    <input type="checkbox" name="courses"/>
+                    <label>MCA</label>
+                    <input type="checkbox" name="courses"/>
+                </div>
+    
+                <div class="form-input">
+                    <label>Country: </label>
+                    <select name="Country">
+                        <option value="india">India</option>
+                        <option valie="aus">Aus</option>
+                    </select>
+                </div>
+                <div class="form-input">
+                    <label>Address</label>
+                    <textarea rows="10" col="20"></textarea>
+                </div>
+    
+              <div class="form-input">
+                <input type="submit" name="button" value="save data"/>
+                <input type="reset" value="Reset Data"/>
+              </div>
+            </form>
+        </div>
+      
+    </body>
+</html>
