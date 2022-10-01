@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table,td,th{
+                border:2px solid green
+            }
+            table{
+                border-collapse: collapse;
+            }
+        </style>
+        <title>
+            Demo 4
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <a href="https://google.com" target="_self">google</a>
+        <a href="https://google.com"><img src="chesky.jpg" width="100px" height="200px"></a>
+
+        <p>hello paragraph</p>
+        <div>hello div</div>
+        <img src="chesk.jpg" style="width:100px;height:200px;" alt="image here">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Roll</th>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>21</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>test2</td>
+                <td>23</td>
+                <td>103</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+                <th>Roll</th>
+            </tr>
+            <tr>
+                <td rowspan="2">test</td>
+                <td>21</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>test2</td>
+                <td>23</td>
+                <td>103</td>
+            </tr>
+        </table>
+
+        <h1>List Items</h1>
+        <ol style="list-style-type:none">
+            <li>milk</li>
+            <li>apple</li>
+            <li>banana</li>
+        </ol>
+        <ul style="list-style-type:none">
+            <li>milk</li>
+            <li>apple</li>
+            <li>banana</li> 
+        </ul>
+
+        <h1>Forms demo</h1>
+        <form name="registarionform" action="index.html" method="get">
+            <label>Fname:</label>
+            <input type="text " name="fname">
+            <label>Lname:</label>
+
+            <input type="text" name="lname">
+            <label>Password</label>
+            <input type="password" name="password">
+            <label>DOB</label>
+            <input type="date">
+            <label>
+                Upload file
+            </label>
+            <input type="file">
+            <label>Gender</label>
+            <input type="radio">Male
+            <input type="radio">Female
+            <label>Terms and agreement</label>
+            <input type="checkbox">i accept
+            <input type="submit">
+        </form>
+
+
+    </body>
+</html>
+
