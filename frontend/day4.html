@@ -12,7 +12,7 @@
         <title>
             Demo 4
         </title>
-        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="style.css"> -->
     </head>
     <body>
         <a href="https://google.com" target="_self">google</a>
@@ -70,13 +70,21 @@
 
         <h1>Forms demo</h1>
         <form name="registarionform" action="index.html" method="get">
-            <label>Fname:</label>
-            <input type="text " name="fname">
-            <label>Lname:</label>
+            <div style="width:300px;background-color: grey;border-radius: 5px;padding:5px;">
+                <span>*</span>
+                <i class="fa fa-home"></i>
+                <label>Fname:</label>
+                <input type="text " name="fname">
+            </div>
+            <div>
+                <label>Lname:</label>
 
-            <input type="text" name="lname">
+                <input type="text" name="lname">
+            </div>
+
             <label>Password</label>
             <input type="password" name="password">
+    </br>
             <label>DOB</label>
             <input type="date">
             <label>
@@ -91,7 +99,37 @@
             <input type="submit">
         </form>
 
+        <div style="border:2px solid;background-color: cyan;">
 
+            <p>hello paragraph</p>
+            <h1>hello heading</h1>
+            <div style="width:300px;height:100px;background:red">
+                <h3>test for nesting div</h3>
+            </div>
+        </div>
+        <div class="parent" style="display:inline-flex">
+            <div style="background-color: red;width:125px;height:125px">
+                <img src="chesky.jpg" width="100%">
+            </div>
+            <div style="background-color: green;width:125px;height:125px">
+                <img src="https://www.irctc.co.in/nget/assets/images/exterior.jpg" width="100%">
+            </div>
+            <div style="background-color: yellow;width:125px;height:125px">
+                <img src="chesky.jpg" width="100%">
+            </div>
+        </div>
+
+        <h1>Demo of audio and video</h1>
+       <audio controls>
+        <source src="audio.mp3" type="audio/mp3">
+       </audio>
+
+       <video controls sidth="200px" height="300px">
+        <source src="dummy.mp4" type="video/mp4">
+       </video>
+
+       <h1>demon for iframe</h1>
+       <iframe src="signup.html" width="400px" height="300px"></iframe>
     </body>
 </html>
 
