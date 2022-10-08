@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+    color:green;
+}
+h1{
+    color:red;
+    background-color: cyan;
+    padding:10px;
+}
+p{
+    color:blue;
+}
+
+#heading2{
+    color:yellow
+}
+#box1{
+    height:125px;
+    width:125px;
+    background-color: cyan;
+}
+.box2{
+    width:125px;
+    height:125px;
+    background-color: green;
+}
+.menu > li{
+    color:red;
+    width:200px;
+}

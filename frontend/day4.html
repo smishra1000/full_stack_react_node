@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" herf="style.css">
         <style>
             table,td,th{
                 border:2px solid green
             }
             table{
                 border-collapse: collapse;
+            }
+            .labelitem{
+                display:inline-flex;width:200px;
+            }
+            .form-element{
+                margin: 12px;
+                padding: 11px;
             }
         </style>
         <title>
@@ -131,6 +139,34 @@
        <h1>demon for iframe</h1>
        <iframe src="signup.html" width="400px" height="300px"></iframe>
        <h1>hello</h1>
+       <div style="width:600px;height: 400px;background-color: cyan;">
+        <form>
+            <div style="display: inline" class="form-element">
+                <div class="labelitem">
+                    <label>
+                        First Name
+                    </label>
+                </div>
+               <div style="display:inline-flex"><input type="text" name="fname"></div>
+                
+            </div>
+            <!-- <div>
+                <label>Last Name</label>
+                <input type="text" name="lname">
+            </div> -->
+            <div class="form-element">
+    
+              <div class="labelitem">
+                <label>Password</label>
+              </div>
+              <div style="display:inline-flex">
+                <input type="password">
+              </div>
+            </div>
+               
+           </form>
+       </div>
+       
     </body>
 </html>
 
