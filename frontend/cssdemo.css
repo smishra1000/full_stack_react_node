@@ -1,4 +1,4 @@
-*{
+/* *{
     margin:0;
     padding:0;
     color:green;
@@ -28,4 +28,34 @@ p{
 .menu > li{
     color:red;
     width:200px;
+}
+
+.heading1{
+    color:red;
+} */
+
+/* body{
+    background-image: url("chesky.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+.content{
+    width:125px;
+    height:125px;
+    background-color: red;
+    font-size: 40px;
+    font-style:italic;
+    font-weight: 600;
+
+    
+}
+a:link{
+    color:green
+}
+a:hover{
+    color:blue;
+}
+a:visited{
+    color:pink;
 }

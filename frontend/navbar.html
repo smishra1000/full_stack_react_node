@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Navigation bar
+        </title>
+        <style>
+            ul li{
+                padding:10px;
+                margin:5px;
+            }
+            ul li:hover{
+                color:red;
+                background-color: green;
+            }
+            .course-menu:hover .submenu{
+                display: block;
+            }
+            .submenu{
+                width:200px;
+                height:200px;
+                background-color: #000;
+                color:#fff;
+                list-style-type: none;
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main-nav" style="height:70px;background-color: blue;display:flex;">
+            <img src="chesky.jpg" style="width:80px;height:50px;">
+            <ul style="color:#fff;list-style-type: none;display:flex">
+                <li>Home</li>
+                <li>Aboust us</li>
+                <li>ContactUs</li> 
+                <li class="course-menu">Courses
+                    <ul class="submenu">
+                        <li>
+                            c
+                        </li>
+                        <li>
+                            cpp
+                        </li>
+                        <li>
+                            java
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </body>
+</html>

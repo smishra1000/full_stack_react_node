@@ -7,13 +7,34 @@
             color:green;
             background-color: red;
         } */
+        .span-content{
+            color:red;
+            display: inline-block;
+        }
+        .box{
+            width:125px;
+            height:125px;
+        }
+        .main{
+        display: flex;
+        flex-direction: row;
+
+        }
+        .main-div{
+            display: inline-flex;
+        }
+        .box{
+            width:125px;
+            height:125px;
+            background-color: red;
+        }
       </style>
         <title>
             css DEMO
         </title>
     </head>
     <body>
-        <h1>hello world</h1>
+        <!-- <h1>hello world</h1>
         <p>hello paragraph</p>
         <h2 id="heading2">hello heading 2 </h2>
         <div id="box1">
@@ -25,6 +46,52 @@
         <ul class="menu">
             <li>home</li>
             <li>aboutus</li>
-        </ul>
+        </ul> -->
+        <!-- <h1 class="heading1">Hello world</h1> -->
+        <!-- <div class="content">
+            hello world
+        </div>
+        <h1>css text demo</h1>
+        <div style="text-align: center;background-color: green;text-transform: uppercase;word-spacing: 4px;color:#fff">
+            hello text css
+        </div>
+        <a href="https://google.com">google</a> -->
+
+        <!-- <h1>Demo Display Properties</h1>
+        <h1>hello block level</h1>
+        <p style="display:none">hello block level</p> -->
+        <!-- none,bloack,inline,inline-bloack,flex,inline-flex,list-item -->
+        <!-- <p>Reference site <span class="span-content">about</span> Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+        <div class="main" style="background-color: red">
+            <div style="background-color: yellow" class="box">
+                box1
+            </div>
+            <div style="background-color: pink;" class="box">
+                box2
+            </div>
+            <div style="background-color: pink;" class="box">
+                box2
+            </div>
+            <div style="background-color: pink;" class="box">
+                box2
+            </div>
+            <div style="background-color: pink;" class="box">
+                box2
+            </div>
+        </div> -->
+        <span style="background-color: red;">Hello i am inline; i wont start with new line; height width cant apply on me</span>
+
+        <h1 style="background:cyan">Hello block <span>level element i'll start</span>level element i'll start with new line and i 'll take entire width of parent,width and height can apply on me</h1>
+        <h1>demo inline-flex</h1>
+        <div class="main-div" style="background-color: cyan;">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box3</div>
+            <div class="box">box3</div>
+            <div class="box">box3</div>
+            <div class="box">box3</div>
+        </div>
+        <p>inherrit <span>demo</span></p>
     </body>
     </html>
