@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function demo</title>
+    </head>
+    <body>
+        <script>
+            // var name="sameer"
+            // function add(a,b){
+            //    var c = a+b;
+            // }
+
+            // function displayUserName(){
+            //     console.log("hello user")
+            // }
+
+            // function checkEvenOrOdd(n){
+            //     if(n%2===0){
+            //         console.log("even")
+            //     }else{
+            //         console.log("odd")
+            //     }
+            // }
+
+            // checkEvenOrOdd(8);
+            // checkEvenOrOdd(7);
+            // checkEvenOrOdd(10);
+            // checkEvenOrOdd(2);
+            //displayUserName();
+
+
+            // var result = add(2,10);
+            // console.log(result)
+            // var result2  = add(50,20);
+            // console.log(result2)
+
+            // function sayHello(msg){
+            //     return function greet(){
+            //         return "hello from inner"
+            //     }
+            // }
+
+        //    var result = sayHello();
+        //     console.log(result())
+        //    function greet(){
+        //             console.log("hello ",msg)
+        //         }
+
+        function add(){
+            var s = 0;
+           for(i=0;i<arguments.length;i++){
+            s = s+arguments[i];
+           }
+           return s;
+        }
+        console.log(add(2));
+        console.log(add(10,20,30,40,50,60));
+        
+
+
+        </script>
+    </body>
+</html>

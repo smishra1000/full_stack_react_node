@@ -1,0 +1,144 @@
+<!DoCTYPE html>
+<html>
+    <head>
+        <title>SYNC ASYNC DEMO</title>
+    </head>
+    <body>
+        <script>
+            // function sayHello(){
+            //     console.log("hello")
+            // }
+
+            // setTimeout(function(){
+
+            // },3000)
+
+            // function greet(fn){
+            //     console.log("greet call")
+            //     fn();
+            // }
+
+
+            //setTimeout(greet,3000,sayHello);
+            //sayHello();
+            //greet("good morning",sayHello)
+
+
+            //event loop 
+
+            // console.log("1")
+
+            // setTimeout(function(){
+            //     console.log("2");
+            // })
+
+            
+            // console.log("3")
+
+            // function getUsers(fn){
+            //     setTimeout(() => {
+            //         console.log("fetching user")
+            //         fn({
+            //             name:"sameer",
+            //             age:"20",
+            //             id:"101"
+            //         })
+            //     }, 0);
+            // }
+
+            // function showUser(user){
+            //     console.log("user info recieved from db")
+            // }
+
+            //getUsers(showUser);
+            //showUser();
+
+            // function show(){
+            //     setTimeout(function(){
+            //         console.log("inside show")
+            //     },0)
+            // }
+
+            // function display() {
+            //     console.log("hello inside display")
+            // }
+
+            // show();
+            // display();
+
+            // console.log("1")
+            // console.log("2")
+            // console.log("3")
+            
+            // function finalResult(){
+            //     console.log("execute me once all done")
+            // }
+
+            // function getAllPost(callback){
+            //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+            //     .then(function(res){
+            //         console.log("i got the data")
+            //         callback();
+            //     })
+            // }
+
+            // function displayPostData(){
+            //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+            //     .then(function(res){
+            //         console.log("i am displaying data")
+            //         console.log("execute only once you finsh all code")
+            //     })
+            // }
+
+           
+
+            // getAllPost(displayPostData);
+            // console.log("1")
+                
+                //example using promise
+
+                function placeorder(){
+                    return new Promise(function(resolve,reject){
+                        fetch('https://jsonplaceholder.typicode.com/todos/1')
+                        .then(function(res){
+                            console.log("api called successfully got the data")
+                            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                            .then(function(res){
+                            console.log("2nd api calling")
+                            resolve("2nd api data got ")
+                        })
+                        })
+                    })
+                }
+
+                function pay(){
+                    console.log("payment done")
+                }
+
+                placeorder().then(function(res){
+                    console.log(res)
+                    pay();
+                }).catch(function(error){
+                    console.log("some error while placing order",error)
+                })
+
+                // function getPost(){
+                //     console.log("calling api to get data")
+                //    fetch('https://jsonplaceholder.typicode.com/todos/1')
+                //     .then(function(res){
+                //         console.log("api called successfully got the data")
+                //         displayData();
+                //     })
+                // }
+
+                // getPost();
+
+                // function displayData(){
+                //     console.log("displaying data");
+                // }
+
+           
+                    //inversion of control 
+        </script>
+    </body>
+</html>

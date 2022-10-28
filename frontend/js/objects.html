@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects demo</title>
+  </head>
+  <body>
+    <script>
+        // var a = 30;
+        // console.log(a,this,window);
+        // document.write("hello")
+
+        function sayHello(){
+                console.log("hello inside window")
+        }
+
+        // sayHello();
+        //var name="sameer";
+
+        // var user = {
+        //     name:"test",
+        //     show:function(){
+        //         console.log(this.name)
+        //     }
+        // }
+        //user.show()
+
+
+        // var user2 = {
+        //     name:"test2"
+        // }
+        // var person = {
+        //   name:"person1"
+        // }
+        //user.show.call(user2)
+
+       // user.show.apply(person)
+
+        //let returnedFn = user.show.bind(person);
+
+        //console.log(returnedFn());
+
+
+
+        // call aply,bind
+
+        // let employee1 = {
+        //   age:20,
+        //   name:"sameer",
+        //   address:"hyd",
+        //   displayInfo:function(greet){
+        //     console.log("name==",this.name,greet);
+        //     console.log("age=",this.age,greet);
+        //     console.log("address==",this.address,greet);
+        //   }
+        // }
+
+        //employee1.displayInfo();
+
+        // let employee2 = {
+        //   age:22,
+        //   name:"sameer22",
+        //   address:"blr",
+        // }
+
+        // employee1.displayInfo.call(employee2,"good morning");
+        // employee1.displayInfo.apply(employee2,["good morning"]);
+
+        // let fn = employee1.displayInfo.bind(employee2)
+        // console.log(fn());
+
+        // function show(){
+        //   console.log("aa",this)
+        // }
+
+        // show();
+
+        function Employee(name,age){
+          console.log(this);
+          this.name=name,
+          this.age=age
+          this.showInfo = function(){
+            console.log("indo==",this.name,this.age)
+          }
+        }
+
+        let emp1 = new Employee("sameer",29);
+
+
+        let emp2 = new Employee("sundar",30);
+
+        emp1.showInfo();
+        emp2.showInfo();
+
+      //new operator--it sued to create new object
+
+
+
+
+    </script>
+  </body>
+</html>
