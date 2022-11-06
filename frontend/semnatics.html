@@ -1,0 +1,112 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=200, initial-scale=1.0">
+        <style>
+            nav{
+                height:40px;
+                background-color: blue;
+            }
+            a{
+                color:#fff;
+                padding:20px;
+            }
+            .box1{
+                width:100px;
+                height:100px;
+                background-color: red;
+            }
+
+            .parent{
+                width:500px;
+                background-color: red;
+                display: flex;
+            }
+            .child1{
+                width:200px;
+                background-color: yellow;
+            }
+            .child2{
+                width:200px;
+                background-color: cyan;
+            }
+            @media screen and (min-width:480px) {
+                .box1{
+                    height:400px;
+                    background-color: green;
+                }
+            }
+            /* @media screen and (max-width:720px) {
+                .box1{
+                    height:800px;
+                    background-color: blue;
+                }
+            }
+            @media screen and (max-width:720px) {
+                .parent{
+                    display: block;
+                }
+                .child1 .child2{
+                    width:500px !important;
+                    
+                }
+            } */
+        </style>
+        
+        <title>
+            Semantics tag demo
+        </title>
+    </head>
+    <body>
+        <!-- <header>
+           <div>
+            <h1>logo</h1>
+
+           </div>
+        </header>
+        <footer>
+            @copywrite
+        </footer>
+        <section>
+            <div>hello i am inside section</div>
+        </section>
+        <article>
+            <h2>News for today</h2>
+            <p>News for today is ....</p>
+        </article>
+        <nav>
+            <a href="google.com">
+                Google
+            </a>
+            <a href="aboutus">
+                AboutUs
+            </a>
+            <a href="Home">
+                Home
+            </a>
+        </nav>
+        <p>102, sytreet1 hyd</p>
+        <address>
+            102, sytreet1 hyd
+        </address> -->
+
+        <div class="box1">
+            box 1 here
+        </div>
+        <div class="parent">
+            <div class="child1">
+                child1
+            </div>
+            <div class="child2">
+                child2
+            </div>
+        </div>
+    </body>
+</html>
+<!-- 
+<aside></aside>
+<main></main>
+<figcaption>
+
+</figcaption>
+<nav></nav> -->
