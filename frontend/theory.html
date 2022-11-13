@@ -89,3 +89,106 @@ VSCODE
            <div style="width:100px;height:200px;background:red">hello div</div>
 
 
+           Synchronous JavaScript
+
+           JavaScript is a single-threaded language. It can do only one task at a time. 
+             It is also a non-blocking language that means it works synchronously. 
+             If there is any task which takes time like an HTTP request, it will not 
+             block the whole task. It will skip that task and moving ahead towards other 
+             tasks.
+          
+          console.log(1)
+          console.log(2)
+          setTimeout(()=>{
+           console.log(3)
+          },2000)
+          console.log(4)
+          //output
+             1
+             2
+             4
+             3
+          In the above example, JavaScript didn’t block the rest of the task. After 2 
+          seconds when setTimeout finished the execution it appears dramatically. we
+           will talk about it later. That’s why JavaScript is called the non-blocking 
+           language.
+          
+          Now someone may think that if we set the timeout to “0” it will appear
+           synchronously. Those who are thinking about it, are completely wrong. 
+           Want proof! Let’s console log it.
+          
+          console.log(1)
+          console.log(2)
+          setTimeout(()=>{
+           console.log(3)
+          },0)
+          console.log(4)
+          //output
+             1
+             2
+             4
+             3
+          That’s the magic of Asynchronous action.
+          
+          Think about one thing if we have some request or task that take some time to 
+          accomplish and our code has to wait for it every time when it invoked. 
+          It will make
+           the application slower which we don’t want. That’s why Asynchronous function 
+          come to action.
+          
+          Asynchronous JavaScript
+          Asynchronous JavaScript works asynchronously with help of “Event loop” and which 
+          implicitly return a promise. Before go deep we have to discuss something related 
+          to JavaScript execution.
+          
+          How JavaScript work
+          
+          Ever time JavaScript invoked there is something called the call stack where our 
+          code,
+           executes. First, it creates a global execution context when our code runs. Then 
+           the first task goes top of the stack and then second and go on. Every time any 
+             task completed it destroys the function values.
+          
+          The call stack execution is synchronous and non-blocking. In our previous example 
+          where we use the seeTimeout, what has happened behind the scene?
+          
+          This something called the web API where we use the Asynchronous function. These 
+             web
+              API or any kind HTTP request execute differently in the runtime environment 
+              and whenever it complete the task it is sent to the callback queue.
+          
+          When our call stack is empty it will call the event loop. Every time the call 
+          stack is empty it calls the event loop if there is task is left to execute.
+          
+          When we use async/await for asynchronous action?
+          Imagine that we want to use an asynchronous function in our application and based on the output we would do something. As JavaScript is single-threaded non-blocking language it will skip those asynchronous actions to execute in the run time environment and get back it while call stack is empty.
+          
+          As our application depends on the asynchronous function’s output we wouldn’t that kind of action. That’s why async/await comes to action.
+          
+          function resolveAfter2second() {
+           
+            return new Promise(resolve=>{
+             setTimeout(()=>{
+               resolve("Hello world")
+              },2000)
+            })
+          }
+          async function greetings() {
+          
+              console.log("Greeting function start")
+              
+               const result = await resolveAfter2second()  ;
+              
+              console.log(result)
+              console.log("Greeting function End") //after 2 second
+              
+             
+          }
+          greetings()
+          Async keyword make sure that function returns a promise. The await 
+             keyword pauses the execution until the promise is resolved or settled.
+              It just a nicer way to write promise compare to Promise.then().
+          
+          Thanks for reading the article. Hope this will help you a little bit
+           understanding the concept of synchronous and Asynchronous action in 
+           JavaScript.
