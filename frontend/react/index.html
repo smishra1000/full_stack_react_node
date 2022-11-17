@@ -1,0 +1,45 @@
+
+<!Doctype html>
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <title>
+            React demo
+        </title>
+    </head>
+    <body id="box1">
+        <!-- <div id="box1"></div> -->
+        
+        <script type="text/babel">
+            const header = (
+                <div>
+                    <h1>hello</h1>
+                    <h2>hello h2</h2>
+                </div>
+            )
+
+            const footer = (
+                <div>
+                   <h1>@copywrite</h1>
+                </div>
+            )
+            const app = (
+                <div>
+                    {header}
+                    {header}
+                    {footer}
+                </div>
+            )
+            const root = document.getElementById("box1");
+            ReactDOM.render(app,root);
+
+        </script>
+    </body>
+</html>
+
+
+
+
