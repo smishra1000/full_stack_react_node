@@ -5,6 +5,12 @@ import EmployeeWithFunction from './EmployeeWithFunction';
 import Company  from './Company';
 import User from './components/User'
 import Article from './components/Article';
+import Counter from './components/Counter';
+import Parent from './components/Parent';
+import ParentData from './components/ParentData';
+import CounterF from './components/functionalcomponents/CounterF';
+import EmpForm from './components/functionalcomponents/EmpForm'
+import AllHook from './hooks/AllHook';
 // import sayHello, {add as sum} from './ModuleDemo'
 
 function App() {
@@ -77,7 +83,12 @@ function App() {
       {/* <Employee company="carrerx" scores={scores} add={add}/> */}
 
       {/* <User/> */}
-      <Article/>
+      {/* <Article/> */}
+      {/* <Counter/> */}
+      {/* <Parent/> */}
+      {/* <CounterF name="sameer"/> */}
+      {/* <EmpForm/> */}
+      <AllHook/>
     </div>
   );
 }
