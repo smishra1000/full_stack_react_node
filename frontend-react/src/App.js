@@ -14,11 +14,6 @@ import AllHook from './hooks/AllHook';
 // import sayHello, {add as sum} from './ModuleDemo'
 
 function App() {
-  const scores = [1,2,3,4]
-
-  const add = ()=>{
-    console.log("i am add inside App")
-  }
   // console.log(sayHello());
   // console.log(sum())
   // let msg = "hello good morning"
@@ -88,7 +83,7 @@ function App() {
       {/* <Parent/> */}
       {/* <CounterF name="sameer"/> */}
       {/* <EmpForm/> */}
-      <AllHook/>
+      {/* <AllHook/> */}
     </div>
   );
 }

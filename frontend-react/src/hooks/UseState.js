@@ -23,6 +23,7 @@ function UseState(props){
         <button  className="btn btn-danger" onClick={()=>decrement()}>Decrement</button>
         <div><h1>count : {count}</h1></div>
         <h2>my name is {name}</h2>
+
         <input type="text" value={name} onChange={handleChange}/>
         </div>
         
