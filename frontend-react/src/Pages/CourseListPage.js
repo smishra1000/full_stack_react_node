@@ -2,7 +2,6 @@ import {useSelector} from "react-redux"
 
 function CourseList(){
     const courses = useSelector(state=>state.courses.courses)
-    console.log(courses)
     return(
         <div>
             <h1>Course List</h1>

@@ -6,6 +6,7 @@ function StudentPage() {
 const navigation = useNavigate();
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
+  const [students,setStudents] = useState([])
 
   const handleNameChange = (e)=>{
     setName(e.target.value)
@@ -18,7 +19,13 @@ const navigation = useNavigate();
         name:name,
         age:age
     }
-    localStorage.setItem("student",JSON.stringify(student))
+    setStudents(oldArray => [...oldArray, student]);
+    let st = localStorage.getItem("students")
+    if(st){
+      let stnew = JSON.parse(st);
+      stnew.push(student)
+      localStorage.setItem("students",JSON.stringify(stnew))
+    }
     navigation("/studentlist")
   }
   return (

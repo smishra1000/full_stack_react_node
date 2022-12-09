@@ -6,10 +6,18 @@ import CoursePage from "./Pages/CoursePage";
 import Header from "./Pages/Header";
 import StudentList from "./Pages/StudentList";
 import CourseList from "./Pages/CourseListPage";
+import ClassBasedComponent from "./react-recap/ClassBasedComponent";
+import FunctionBasedComponent from "./react-recap/FunctionBasedComponent";
+import StateHook from "./react-recap/recap-hooks/StateHook";
+import EffectHookDemo from "./react-recap/recap-hooks/EffectHook";
 
 function MainApp() {
   return (
     <div className="App">
+      {/* <ClassBasedComponent/>
+      <FunctionBasedComponent/> */}
+      {/* <StateHook/>
+      <EffectHookDemo/> */}
       <BrowserRouter>
         <Header/>
         <Routes>

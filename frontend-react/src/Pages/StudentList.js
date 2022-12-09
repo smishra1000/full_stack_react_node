@@ -1,24 +1,25 @@
 import {useState,useEffect} from "react"
 function StudentList(){
-
-    const [student,setStudent] =useState({name:"",age:0})
+    const [students,setStudents] = useState([])
     useEffect(()=>{
-        let student = localStorage.getItem("student")
-        if(student){
-            let studentData = JSON.parse(student)
-            //const {name,age} = studentData
-            setStudent((prev)=>({
-                ...prev,
-                ...studentData
-        
-            }))
+        let students = localStorage.getItem("students")
+        if(students){
+            let studentData = JSON.parse(students)
+            setStudents(oldArray => [...oldArray, ...studentData]);
         }
     },[])
     return(
         <div className="container">
             <h1>I am in student list page</h1>
             <div>
-                <h1>Name: {student.name} Age:  {student.age}</h1>
+                <ul>
+                {students.map((student,index)=>{
+                    return(
+                        <li key={index}>{student.name} {student.age}</li>
+                    )
+                })}
+                        
+                </ul>
             </div>
         </div>
     )
