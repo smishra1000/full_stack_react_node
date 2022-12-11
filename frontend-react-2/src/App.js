@@ -16,6 +16,9 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import ParentLifeCycle from "./Lifecycle/ParentLifeCycle";
+import UseStateDemo from "./Hooks/UseStateDemo";
+import UseReducerDemoHook from "./Hooks/UseReducerHookDemo";
+import UseEffectHookDemo from "./Hooks/UseEffectHookDemo";
 function App() {
   return (
     <div>
@@ -26,7 +29,7 @@ function App() {
     <CounterFunction company="abc" mob="123445"/> */}
 
       {/* <Parent/> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Header/>
         <Routes>
           <Route path="/" element={<EmployeePage />}></Route>
@@ -36,7 +39,10 @@ function App() {
           <Route path="/lifecycle" element={<ParentLifeCycle/>}></Route>
           
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <UseStateDemo/>
+      <UseReducerDemoHook/>
+      <UseEffectHookDemo/>
     </div>
   );
 }
