@@ -21,10 +21,14 @@ const navigation = useNavigate();
     }
     setStudents(oldArray => [...oldArray, student]);
     let st = localStorage.getItem("students")
+    let stnew = []
     if(st){
       let stnew = JSON.parse(st);
-      stnew.push(student)
+      stnew = [...stnew,student]
       localStorage.setItem("students",JSON.stringify(stnew))
+    }else {
+      stnew.push(student)
+       localStorage.setItem("students",JSON.stringify(stnew))
     }
     navigation("/studentlist")
   }
