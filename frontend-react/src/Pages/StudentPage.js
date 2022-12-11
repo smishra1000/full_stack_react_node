@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
 function StudentPage() {
@@ -7,6 +7,7 @@ const navigation = useNavigate();
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [students,setStudents] = useState([])
+  const [isSaved,setIsSaved] = useState(false)
 
   const handleNameChange = (e)=>{
     setName(e.target.value)
@@ -19,19 +20,29 @@ const navigation = useNavigate();
         name:name,
         age:age
     }
-    setStudents(oldArray => [...oldArray, student]);
-    let st = localStorage.getItem("students")
-    let stnew = []
-    if(st){
-      let stnew = JSON.parse(st);
-      stnew = [...stnew,student]
-      localStorage.setItem("students",JSON.stringify(stnew))
-    }else {
-      stnew.push(student)
-       localStorage.setItem("students",JSON.stringify(stnew))
-    }
-    navigation("/studentlist")
+    setStudents(prevState => [...prevState, student]);
+    setIsSaved(true)
   }
+
+  useEffect(() => {
+    const json = localStorage.getItem("students");
+    const savedStudents = JSON.parse(json);
+    if (savedStudents) {
+      setStudents(savedStudents);
+    }
+  }, []);
+
+  useEffect(() => {
+    const json = JSON.stringify(students);
+    localStorage.setItem("students", json);
+  }, [students]);
+
+  useEffect(()=>{
+    if(isSaved) {
+      navigation("/studentList")
+    }
+  },[isSaved])
+
   return (
     <div>
         <div className="container">
