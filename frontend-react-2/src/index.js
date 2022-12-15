@@ -2,11 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MainApp from './App';
 
+// redux configuration
+import  {Provider} from "react-redux";
+import { createStore } from 'redux';
+import rootReducer from "./reducers/rootReducer"
+
+
+const store = createStore(rootReducer)
+
+// redux configuration done
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
+  <Provider store={store}>
     <MainApp />
+  </Provider>
+    
   // </React.StrictMode>
 );
 

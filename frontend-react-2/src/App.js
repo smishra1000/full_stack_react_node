@@ -19,6 +19,11 @@ import ParentLifeCycle from "./Lifecycle/ParentLifeCycle";
 import UseStateDemo from "./Hooks/UseStateDemo";
 import UseReducerDemoHook from "./Hooks/UseReducerHookDemo";
 import UseEffectHookDemo from "./Hooks/UseEffectHookDemo";
+import PropsDrilling from "./Hooks/PropsDrilling";
+import UseContextHookDemo from "./Hooks/UseContextHookDemo";
+import UseRefHookDemo from "./Hooks/UseRefHookDemo";
+import EventHandling from "./components/EventHandling";
+import ReduxCounter from "./components/ReduxCounter";
 function App() {
   return (
     <div>
@@ -40,9 +45,15 @@ function App() {
           
         </Routes>
       </BrowserRouter> */}
-      <UseStateDemo/>
+      {/* <UseStateDemo/>
       <UseReducerDemoHook/>
-      <UseEffectHookDemo/>
+      <UseEffectHookDemo/> */}
+      {/* <PropsDrilling/> */}
+      {/* <UseContextHookDemo/> */}
+      {/* <UseRefHookDemo/> */}
+      {/* <EventHandling/> */}
+
+      <ReduxCounter/>
     </div>
   );
 }
