@@ -34,7 +34,7 @@ function App() {
     <CounterFunction company="abc" mob="123445"/> */}
 
       {/* <Parent/> */}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Header/>
         <Routes>
           <Route path="/" element={<EmployeePage />}></Route>
@@ -44,7 +44,7 @@ function App() {
           <Route path="/lifecycle" element={<ParentLifeCycle/>}></Route>
           
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
       {/* <UseStateDemo/>
       <UseReducerDemoHook/>
       <UseEffectHookDemo/> */}
@@ -53,7 +53,7 @@ function App() {
       {/* <UseRefHookDemo/> */}
       {/* <EventHandling/> */}
 
-      <ReduxCounter/>
+      {/* <ReduxCounter/> */}
     </div>
   );
 }
