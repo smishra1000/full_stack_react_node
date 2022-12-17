@@ -18,7 +18,7 @@ function UseState(props){
 
     return(
         <div>
-            <h1>Demo of use state hook</h1>
+        <h1>Demo of use state hook</h1>
         <button className="btn btn-primary" onClick={()=>increment()}>Increment</button>
         <button  className="btn btn-danger" onClick={()=>decrement()}>Decrement</button>
         <div><h1>count : {count}</h1></div>

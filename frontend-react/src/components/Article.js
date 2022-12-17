@@ -10,7 +10,11 @@ class Article extends React.Component {
         id: "",
         title: "",
         content: "",
+        
       },
+      newArticle:{},
+      isDisplay:false
+      
     };
   }
 
@@ -32,12 +36,16 @@ class Article extends React.Component {
     });
   }
 
+  handleUser(e){
+    this.setState({article:{...this.state.article,user:e.target.value,}})
+  }
+
   saveData(e) {
     e.preventDefault();
     let article = this.state.article;
     let tempArticles = this.state.articles;
     tempArticles.push(article);
-    this.setState({ articles: tempArticles,article:{...article,id:"",title:"",content:""} });
+    this.setState({ articles: tempArticles,article:{...article,id:"",title:"",content:""},isDisplay:true,newArticle:{...article} });
   }
 
   render() {
@@ -89,15 +97,22 @@ class Article extends React.Component {
                 />
               </div>
             </div>
+            <label>User Name</label>
+            <input type="text" value={this.state.article.user} onChange={(e)=>this.handleUser(e)}/>
             <button type="submit" className="btn btn-primary">
               Save
             </button>
           </form>
          
         </div>
-        <div className="row">
-        <ArticleList articles={this.state.articles}/>
-        </div>
+        {this.state.isDisplay && <div className="row">
+          <h1>Article data</h1>
+          <h1>Article id: {this.state.newArticle.id}</h1>
+          <h1>Article title: {this.state.newArticle.title}</h1>
+          <h1>Article content: {this.state.newArticle.content}</h1>
+          <h1>Article user: {this.state.newArticle.user}</h1>
+        {/* <ArticleList articles={this.state.articles}/> */}
+        </div>}
       </div>
     );
   }

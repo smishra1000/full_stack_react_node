@@ -18,10 +18,12 @@ class Employee extends React.Component{
     changeName(){
         console.log(this.state.name);
         this.setState({name:this.state.changeName})
+        this.setState({changeName:""})
         this.props.add();
     }
     handleChange(event){
         this.setState({changeName:event.target.value})
+
     }
 
     render(){

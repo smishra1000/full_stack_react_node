@@ -12,6 +12,9 @@ import StateHook from "./react-recap/recap-hooks/StateHook";
 import EffectHookDemo from "./react-recap/recap-hooks/EffectHook";
 import UseReducerRecap from "./hooks/UseReducerRecap";
 import UserPage from "./Pages/UserPage";
+import Article from "./components/Article";
+import Employee from "./Employee";
+import EmpForm from "./components/functionalcomponents/EmpForm";
 
 function MainApp() {
   return (
@@ -20,7 +23,7 @@ function MainApp() {
       <FunctionBasedComponent/> */}
       {/* <StateHook/>
       <EffectHookDemo/> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Header/>
         <Routes>
           <Route path="/course" element={<CoursePage/>}></Route>
@@ -31,7 +34,10 @@ function MainApp() {
           <Route path="/courseList" element={<CourseList/>}></Route>
           <Route path="/users" element={<UserPage/>}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      {/* <Article/> */}
+      {/* <Employee/> */}
+      <EmpForm/>
       {/* <UseReducerRecap/> */}
         
     </div>
