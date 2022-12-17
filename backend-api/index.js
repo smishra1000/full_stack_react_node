@@ -5,6 +5,9 @@ var app = express();
 var port = 5000
 
 var users = require('./routes/users')
+var employee  = require("./routes/employee")
+
+
 var jsonParser = bodyParser.json()
 app.use(bodyParser.json({ type: 'application/*+json' }))
 
