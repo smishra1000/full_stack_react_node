@@ -14,10 +14,12 @@
         <!-- <div id="box1"></div> -->
         
         <script type="text/babel">
+            const age = 80;
+            const username = "sameer";
             const header = (
                 <div>
-                    <h1>hello</h1>
-                    <h2>hello h2</h2>
+                    <h1>hello may age is{age}</h1>
+                    <h2>hello i am {username}</h2>
                 </div>
             )
 
@@ -26,16 +28,25 @@
                    <h1>@copywrite</h1>
                 </div>
             )
+
+            const main = (
+                <div>main section
+                    <ul>
+                        <li>home</li>
+                        <li>about us</li>
+                        <li>contact us</li>
+                        </ul>
+                    </div>
+            )
             const app = (
                 <div>
                     {header}
-                    {header}
+                    {main}
                     {footer}
                 </div>
             )
             const root = document.getElementById("box1");
-            ReactDOM.render(app,root);
-
+            ReactDOM.render(app,root); 
         </script>
     </body>
 </html>

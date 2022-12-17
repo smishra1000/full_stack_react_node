@@ -11,6 +11,16 @@ var users = [
         age:32
     }
 ]
+
+
+// function show(){
+//     console.log("i am in show")
+// }
+
+// setInterval (function(){
+//     console.log("inside settimeout")
+// },1000)
+
 var server = http.createServer(function(req,res){
     console.log("hello i am in / request",req.url,req.method);
     if(req.url==='/'){
