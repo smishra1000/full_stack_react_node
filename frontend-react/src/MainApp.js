@@ -15,6 +15,7 @@ import UserPage from "./Pages/UserPage";
 import Article from "./components/Article";
 import Employee from "./Employee";
 import EmpForm from "./components/functionalcomponents/EmpForm";
+import UsersCrud from "./Pages/UsersCrud";
 
 function MainApp() {
   return (
@@ -23,7 +24,7 @@ function MainApp() {
       <FunctionBasedComponent/> */}
       {/* <StateHook/>
       <EffectHookDemo/> */}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Header/>
         <Routes>
           <Route path="/course" element={<CoursePage/>}></Route>
@@ -33,11 +34,12 @@ function MainApp() {
           <Route path="/studentlist" element={<StudentList/>}></Route>
           <Route path="/courseList" element={<CourseList/>}></Route>
           <Route path="/users" element={<UserPage/>}></Route>
+          <Route path="/userscrud" element={<UsersCrud/>}></Route>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
       {/* <Article/> */}
       {/* <Employee/> */}
-      <EmpForm/>
+      {/* <EmpForm/> */}
       {/* <UseReducerRecap/> */}
         
     </div>

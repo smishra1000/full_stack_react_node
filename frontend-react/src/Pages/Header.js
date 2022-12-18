@@ -44,6 +44,11 @@ function Header() {
                 Users
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/userscrud">
+                UsersCrudApp
+              </Link>
+            </li>
           </ul>
           <form className="d-flex">
             <input

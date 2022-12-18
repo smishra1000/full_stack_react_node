@@ -2,12 +2,6 @@ var express = require("express");
 var router = express.Router()
 
 var users = [
-    {
-        id:1,
-        name:"sameer",
-        age:30,
-        phone:"11111"
-    }
 
 ]
 
@@ -17,6 +11,7 @@ router.get("/",function(req,res){
 
 
 router.post("/create",function(req,res){
+
     console.log(req.body)
     const {name,age,phone,id} = req.body
     users.push({name,age,phone,id})
@@ -24,8 +19,9 @@ router.post("/create",function(req,res){
 })
 
 router.delete("/:id/delete",function(req,res){
+    console.log(req.params.id)
     let filteredUsers = users.filter(function(item){
-        return item.id!==Number(req.params.id)
+        return Number(item.id)!==Number(req.params.id)
     })
     console.log("after deleteion users=",filteredUsers.length)
     users = [...filteredUsers]
@@ -36,7 +32,15 @@ router.delete("/:id/delete",function(req,res){
 })
 
 router.put("/:id/update",function(req,res){
-    
+    for(i=0;i<users.length;i++){
+        if(users[i].id===Number(req.params.id)) {
+            users[i].age = req.body.age;
+            users[i].name=req.body.name;
+            users[i].phone = req.body.phone;
+            users[i].id = req.body.id
+        }
+    }
+    res.send("user updated successfully")
 })
 
 //localhost:5000/users/${id}/delete
