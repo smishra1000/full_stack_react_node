@@ -34,6 +34,9 @@ function Header() {
             <li className="nav-item">
             <Link className="nav-link" to="/lifecycle">LifeCycle demo</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="/employeesearch">Employee Search</Link>
+            </li>
           </ul>
           <form className="d-flex">
             <input

@@ -3,9 +3,8 @@ import {useEffect, useEffectHook,useState} from "react";
 function UsersPage(){
     const [users,setUsers] = useState([])
 
-
     useEffect(()=>{
-        fetch("http://localhost:5000/users").then(function(res){
+        fetch("http://localhost:7000/user").then(function(res){
             return res.json()
         }).then(function(result){
             console.log(result);

@@ -24,6 +24,7 @@ import UseContextHookDemo from "./Hooks/UseContextHookDemo";
 import UseRefHookDemo from "./Hooks/UseRefHookDemo";
 import EventHandling from "./components/EventHandling";
 import ReduxCounter from "./components/ReduxCounter";
+import EmployeeSearch from "./Pages/EmployeeSearch";
 function App() {
   return (
     <div>
@@ -42,6 +43,7 @@ function App() {
           <Route path="/company" element={<CompanyPage />}></Route>
           <Route path="/employeelist" element={<EmployeeListPage/>}></Route>
           <Route path="/lifecycle" element={<ParentLifeCycle/>}></Route>
+          <Route path="/employeesearch" element={<EmployeeSearch/>}></Route>
           
         </Routes>
       </BrowserRouter>

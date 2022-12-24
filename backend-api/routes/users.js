@@ -11,7 +11,6 @@ router.get("/",function(req,res){
 
 
 router.post("/create",function(req,res){
-
     console.log(req.body)
     const {name,age,phone,id} = req.body
     users.push({name,age,phone,id})
@@ -27,13 +26,11 @@ router.delete("/:id/delete",function(req,res){
     users = [...filteredUsers]
     console.log(users)
     res.send("deleted user successfully")
-
-
 })
 
 router.put("/:id/update",function(req,res){
     for(i=0;i<users.length;i++){
-        if(users[i].id===Number(req.params.id)) {
+        if(Number(users[i].id)===Number(req.params.id)) {
             users[i].age = req.body.age;
             users[i].name=req.body.name;
             users[i].phone = req.body.phone;
