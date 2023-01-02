@@ -1,6 +1,14 @@
 const express = require("express");
 var router = express.Router();
 var users = []
+var userType="admin"
+
+router.use(function(req,res,next){
+    if(req.method==="DELETE" && userType==="admin"){
+        res.send("you dont have enough permission to delete a user")
+    }
+    next();
+})
 
 router.get("/",function(req,res){
    res.send(users);

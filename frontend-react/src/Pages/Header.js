@@ -49,6 +49,11 @@ function Header() {
                 UsersCrudApp
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/userssearch">
+                UsersSerach
+              </Link>
+            </li>
           </ul>
           <form className="d-flex">
             <input

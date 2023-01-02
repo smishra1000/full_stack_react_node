@@ -16,6 +16,7 @@ import Article from "./components/Article";
 import Employee from "./Employee";
 import EmpForm from "./components/functionalcomponents/EmpForm";
 import UsersCrud from "./Pages/UsersCrud";
+import UsersSearchPage from "./Pages/UsersSearchPage"
 
 function MainApp() {
   return (
@@ -35,6 +36,7 @@ function MainApp() {
           <Route path="/courseList" element={<CourseList/>}></Route>
           <Route path="/users" element={<UserPage/>}></Route>
           <Route path="/userscrud" element={<UsersCrud/>}></Route>
+          <Route path="/userssearch" element={<UsersSearchPage/>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Article/> */}
