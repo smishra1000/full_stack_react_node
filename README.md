@@ -1,2 +1,2 @@
-# full_stack_training_carrerx
+# full_stack
 Realeted to Full stack training
